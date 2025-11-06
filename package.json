@@ -7,9 +7,9 @@
     "examples/*"
   ],
   "scripts": {
-    "dev": "pnpm --filter ./packages/* dev",
-    "build": "pnpm --filter ./packages/* build",
-    "test": "pnpm --filter ./packages/* test",
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
     "lint": "eslint . --ext .ts,.tsx,.vue",
     "type-check": "tsc --noEmit"
   },
