@@ -100,6 +100,8 @@ yarn add @angus-editor/vue
 yarn add @angus-editor/react
 ```
 
+> 💡 **快速上手**: 查看 [快速开始指南](./docs/QUICKSTART.md) 了解 5 分钟内如何集成编辑器
+
 ---
 
 ## 🚀 快速开始
@@ -184,6 +186,15 @@ export default App;
 | `showFooter` | `boolean` | `true` | 是否显示页脚 |
 | `onUpdate` | `(content: string) => void` | - | 内容更新回调 |
 | `onThemeChange` | `(theme: 'light' \| 'dark') => void` | - | 主题切换回调 |
+
+---
+
+## 📚 文档
+
+- 📖 [快速开始](./docs/QUICKSTART.md) - 5分钟快速集成
+- 🔧 [API 文档](./docs/API.md) - 完整的 API 参考
+- ✨ [功能指南](./docs/FEATURES.md) - 所有功能详解
+- 🤝 [贡献指南](./CONTRIBUTING.md) - 如何贡献代码
 
 ---
 
