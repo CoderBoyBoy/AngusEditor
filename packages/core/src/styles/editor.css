@@ -1,0 +1,386 @@
+/* Base Editor Styles */
+.angus-editor {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--editor-text-color);
+  background-color: var(--editor-bg-color);
+  border: 1px solid var(--editor-border-color);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.angus-editor:focus-within {
+  border-color: var(--editor-focus-border-color);
+  box-shadow: 0 0 0 3px var(--editor-focus-shadow-color);
+}
+
+/* Light Theme Variables */
+.angus-editor.theme-light {
+  --editor-text-color: #1a1a1a;
+  --editor-bg-color: #ffffff;
+  --editor-border-color: #e0e0e0;
+  --editor-focus-border-color: #4a90e2;
+  --editor-focus-shadow-color: rgba(74, 144, 226, 0.1);
+  --editor-secondary-bg: #f5f5f5;
+  --editor-secondary-text: #666666;
+  --editor-link-color: #4a90e2;
+  --editor-highlight-bg: #fff59d;
+  --editor-code-bg: #f5f5f5;
+  --editor-code-border: #e0e0e0;
+  --editor-table-border: #e0e0e0;
+  --editor-table-header-bg: #f5f5f5;
+}
+
+/* Dark Theme Variables */
+.angus-editor.theme-dark {
+  --editor-text-color: #e0e0e0;
+  --editor-bg-color: #1e1e1e;
+  --editor-border-color: #404040;
+  --editor-focus-border-color: #5ca3e6;
+  --editor-focus-shadow-color: rgba(92, 163, 230, 0.15);
+  --editor-secondary-bg: #2a2a2a;
+  --editor-secondary-text: #a0a0a0;
+  --editor-link-color: #5ca3e6;
+  --editor-highlight-bg: #7a6f00;
+  --editor-code-bg: #2a2a2a;
+  --editor-code-border: #404040;
+  --editor-table-border: #404040;
+  --editor-table-header-bg: #2a2a2a;
+}
+
+/* Editor Content Area */
+.angus-editor .ProseMirror {
+  padding: 16px;
+  min-height: 200px;
+  outline: none;
+}
+
+.angus-editor .ProseMirror:focus {
+  outline: none;
+}
+
+/* Placeholder */
+.angus-editor .ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--editor-secondary-text);
+  pointer-events: none;
+  height: 0;
+}
+
+/* Headings */
+.angus-editor h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  line-height: 1.2;
+}
+
+.angus-editor h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  line-height: 1.3;
+}
+
+.angus-editor h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
+
+.angus-editor h4 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  line-height: 1.5;
+}
+
+.angus-editor h5 {
+  font-size: 0.83em;
+  font-weight: bold;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  line-height: 1.5;
+}
+
+.angus-editor h6 {
+  font-size: 0.67em;
+  font-weight: bold;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  line-height: 1.5;
+}
+
+/* Text Formatting */
+.angus-editor strong {
+  font-weight: bold;
+}
+
+.angus-editor em {
+  font-style: italic;
+}
+
+.angus-editor u {
+  text-decoration: underline;
+}
+
+.angus-editor s {
+  text-decoration: line-through;
+}
+
+.angus-editor code {
+  background-color: var(--editor-code-bg);
+  border: 1px solid var(--editor-code-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+}
+
+.angus-editor mark {
+  background-color: var(--editor-highlight-bg);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+/* Links */
+.angus-editor a.editor-link {
+  color: var(--editor-link-color);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.angus-editor a.editor-link:hover {
+  opacity: 0.8;
+}
+
+/* Lists */
+.angus-editor ul,
+.angus-editor ol {
+  padding-left: 1.5em;
+  margin: 1em 0;
+}
+
+.angus-editor ul {
+  list-style-type: disc;
+}
+
+.angus-editor ol {
+  list-style-type: decimal;
+}
+
+.angus-editor li {
+  margin: 0.25em 0;
+}
+
+.angus-editor ul ul {
+  list-style-type: circle;
+}
+
+.angus-editor ul ul ul {
+  list-style-type: square;
+}
+
+/* Task Lists */
+.angus-editor ul.task-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.angus-editor ul.task-list li.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.angus-editor ul.task-list li.task-item > label {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  user-select: none;
+}
+
+.angus-editor ul.task-list li.task-item > div {
+  flex: 1;
+}
+
+.angus-editor ul.task-list input[type="checkbox"] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* Blockquote */
+.angus-editor blockquote {
+  border-left: 4px solid var(--editor-border-color);
+  padding-left: 16px;
+  margin: 1em 0;
+  font-style: italic;
+  color: var(--editor-secondary-text);
+}
+
+/* Code Blocks */
+.angus-editor pre {
+  background-color: var(--editor-code-bg);
+  border: 1px solid var(--editor-code-border);
+  border-radius: 6px;
+  padding: 16px;
+  margin: 1em 0;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.angus-editor pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Horizontal Rule */
+.angus-editor hr {
+  border: none;
+  border-top: 2px solid var(--editor-border-color);
+  margin: 2em 0;
+}
+
+/* Images */
+.angus-editor img.editor-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 1em 0;
+  display: block;
+}
+
+.angus-editor img.editor-image.ProseMirror-selectednode {
+  outline: 3px solid var(--editor-focus-border-color);
+  outline-offset: 2px;
+}
+
+/* Tables */
+.angus-editor table.editor-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  overflow: hidden;
+  table-layout: fixed;
+}
+
+.angus-editor table.editor-table td,
+.angus-editor table.editor-table th {
+  border: 1px solid var(--editor-table-border);
+  padding: 8px 12px;
+  vertical-align: top;
+  position: relative;
+  min-width: 100px;
+}
+
+.angus-editor table.editor-table th {
+  background-color: var(--editor-table-header-bg);
+  font-weight: bold;
+  text-align: left;
+}
+
+.angus-editor table.editor-table .selectedCell:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--editor-focus-shadow-color);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.angus-editor table.editor-table .column-resize-handle {
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--editor-focus-border-color);
+  cursor: col-resize;
+  pointer-events: auto;
+}
+
+/* Paragraph Spacing */
+.angus-editor p {
+  margin: 0.5em 0;
+}
+
+.angus-editor p:first-child {
+  margin-top: 0;
+}
+
+.angus-editor p:last-child {
+  margin-bottom: 0;
+}
+
+/* Selection */
+.angus-editor .ProseMirror-selectednode {
+  outline: 2px solid var(--editor-focus-border-color);
+  outline-offset: 2px;
+}
+
+/* Gapcursor (when cursor is in an empty position) */
+.angus-editor .ProseMirror-gapcursor {
+  display: block;
+  pointer-events: none;
+  position: relative;
+}
+
+.angus-editor .ProseMirror-gapcursor:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 20px;
+  border-top: 2px solid var(--editor-text-color);
+  animation: ProseMirror-cursor-blink 1.1s steps(2, start) infinite;
+}
+
+@keyframes ProseMirror-cursor-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .angus-editor .ProseMirror {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .angus-editor table.editor-table {
+    font-size: 14px;
+  }
+
+  .angus-editor table.editor-table td,
+  .angus-editor table.editor-table th {
+    padding: 6px 8px;
+    min-width: 80px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .angus-editor {
+    border: none;
+    box-shadow: none;
+  }
+
+  .angus-editor .ProseMirror {
+    padding: 0;
+  }
+}
