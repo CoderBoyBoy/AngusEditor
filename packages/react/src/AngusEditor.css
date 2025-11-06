@@ -1,0 +1,76 @@
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  border-bottom: 1px solid var(--editor-border-color);
+  background-color: var(--editor-secondary-bg);
+  border-radius: 8px 8px 0 0;
+}
+
+.toolbar-group {
+  display: flex;
+  gap: 2px;
+}
+
+.toolbar-divider {
+  width: 1px;
+  background-color: var(--editor-border-color);
+  margin: 0 4px;
+}
+
+.editor-toolbar button,
+.editor-toolbar select {
+  padding: 6px 10px;
+  border: 1px solid var(--editor-border-color);
+  background-color: var(--editor-bg-color);
+  color: var(--editor-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.editor-toolbar button:hover:not(:disabled),
+.editor-toolbar select:hover {
+  background-color: var(--editor-secondary-bg);
+  border-color: var(--editor-focus-border-color);
+}
+
+.editor-toolbar button.is-active {
+  background-color: var(--editor-focus-border-color);
+  color: white;
+  border-color: var(--editor-focus-border-color);
+}
+
+.editor-toolbar button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toolbar-select {
+  min-width: 120px;
+}
+
+.editor-footer {
+  padding: 8px 16px;
+  border-top: 1px solid var(--editor-border-color);
+  background-color: var(--editor-secondary-bg);
+  border-radius: 0 0 8px 8px;
+  font-size: 12px;
+  color: var(--editor-secondary-text);
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .editor-toolbar {
+    font-size: 12px;
+  }
+
+  .editor-toolbar button,
+  .editor-toolbar select {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+}

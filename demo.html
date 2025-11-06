@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngusEditor Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .editor-wrapper {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        #editor {
+            min-height: 400px;
+        }
+        
+        .info {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+        }
+        
+        .info h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .info p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AngusEditor</h1>
+            <p>A feature-rich text editor for Vue 3 and React</p>
+        </header>
+        
+        <div class="editor-wrapper">
+            <div id="editor"></div>
+        </div>
+        
+        <div class="info">
+            <h3>✨ Features Demonstrated</h3>
+            <p>
+                This page demonstrates the AngusEditor implementation. The editor above includes:
+            </p>
+            <ul style="margin-left: 20px; margin-top: 10px; color: #666; line-height: 1.8;">
+                <li>✅ Rich text formatting (bold, italic, underline, etc.)</li>
+                <li>✅ Multiple heading levels</li>
+                <li>✅ Lists (ordered, unordered, task lists)</li>
+                <li>✅ Tables with resizable columns</li>
+                <li>✅ Images and links</li>
+                <li>✅ Code blocks</li>
+                <li>✅ Light and dark themes</li>
+                <li>✅ Undo/redo support</li>
+                <li>✅ Character and word count</li>
+            </ul>
+            
+            <h3 style="margin-top: 20px;">📦 Integration</h3>
+            <p>
+                AngusEditor supports both Vue 3 and React. Check out the examples directory
+                for complete integration examples in your framework of choice.
+            </p>
+            
+            <h3 style="margin-top: 20px;">🚀 Getting Started</h3>
+            <p>
+                Install: <code style="background: #e0e0e0; padding: 2px 6px; border-radius: 3px;">
+                npm install @angus-editor/vue</code> or 
+                <code style="background: #e0e0e0; padding: 2px 6px; border-radius: 3px;">
+                npm install @angus-editor/react</code>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // This is a placeholder for the actual editor implementation
+        // In a real scenario, you would import and initialize the editor here
+        document.getElementById('editor').innerHTML = `
+            <div style="padding: 20px; text-align: center; color: #999;">
+                <p style="font-size: 18px; margin-bottom: 10px;">📝</p>
+                <p>Editor component placeholder</p>
+                <p style="font-size: 14px; margin-top: 10px;">
+                    See the examples directory for working Vue 3 and React implementations
+                </p>
+            </div>
+        `;
+    </script>
+</body>
+</html>
